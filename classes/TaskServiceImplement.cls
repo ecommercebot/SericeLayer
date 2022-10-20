@@ -12,11 +12,10 @@ public static void createTasks(Set<Id> ids, Schema.SObjectType objectType) {
 	I_CreateTask createTask = (I_CreateTask)objectDomain;
 	createTask.createTasksForOpportunities(addTasksTo, unitOfWork);
 
-
-		try{
+		try {
 			unitOfWork.commitWork();
 		}
-		catch(Exception e){
+		catch(Exception e) {
 			throw e;
 		}
    
